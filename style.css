@@ -77,3 +77,74 @@ body {
 .button:hover {
 	color: #fff;
 }
+
+/* ------------------------------------------------------------- Cloud Animation -------------------------------------------------------------- */
+
+.cloud-1 {
+	position: absolute;
+	top: 22%;
+	width: 5rem;
+	opacity: 0;
+	animation: cloudAnimation 25s linear infinite;
+	animation-delay: 5s;
+}
+
+.cloud-2 {
+	position: absolute;
+	top: 5%;
+	width: 3rem;
+	opacity: 0;
+	animation: cloudAnimation 28s linear infinite;
+}
+
+.cloud-3 {
+	position: absolute;
+	top: 40%;
+	width: 5rem;
+	opacity: 0;
+	animation: cloudAnimation 20s linear infinite;
+	animation-delay: 2s;
+}
+
+.cloud-4 {
+	position: absolute;
+	top: 28%;
+	opacity: 0;
+	width: 8rem;
+	animation: cloudAnimation 30s linear infinite;
+}
+
+.cloud-5 {
+	position: absolute;
+	top: 2%;
+	opacity: 0;
+	width: 3rem;
+	animation: cloudAnimation 35s linear infinite;
+}
+
+@keyframes cloudAnimation {
+	0% {
+		opacity: 0;
+		margin-left: 100%;
+	}
+
+	10% {
+		opacity: 0.5;
+		margin-left: 90%;
+	}
+
+	15% {
+		opacity: 1;
+		margin-left: 85%;
+	}
+
+	90% {
+		opacity: 0.5;
+		margin-left: 10%;
+	}
+
+	100% {
+		opacity: 0;
+		margin-left: 0%;
+	}
+}
