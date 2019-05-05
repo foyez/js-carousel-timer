@@ -31,6 +31,8 @@ body {
 	padding-top: 5rem;
 	margin: 0 auto;
 	word-wrap: break-word;
+	position: relative;
+	z-index: 1000;
 }
 
 .header__img {
@@ -295,7 +297,10 @@ body {
 	}
 
 	.header__heading {
-		width: 90%;
+		font-size: 3rem;
+		text-align: center;
+		max-width: none;
+		width: 55%;
 	}
 
 	.feature-img {
@@ -325,8 +330,7 @@ body {
 
 @media only screen and (max-width: 37.5em) {
 	.header__heading {
-		font-size: 3rem;
-		text-align: center;
+		width: 90%;
 	}
 }
 
