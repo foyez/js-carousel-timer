@@ -50,26 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const left = () => {
-	if (translationComplete) {
-		translationComplete = false;
-		index++;
-
-		images.forEach((img, i) => {
-			img.style.opacity = 1;
-			img.style.transform = 'translate(' + (currTranslation[i] - size) + 'px)';
-			currTranslation[i] = currTranslation[i] - size;
-		});
-
-		var outerIndex = (index - 1) % amount;
-
-		var outerImg = document.querySelectorAll('.slide')[outerIndex];
-		outerImg.style.transform =
-			'translateX(' + (currTranslation[outerIndex] + size * amount) + 'px)';
-		outerImg.style.opacity = '0';
-		currTranslation[outerIndex] = currTranslation[outerIndex] + size * amount;
-	}
-
 	window.onresize = () => {
+		timeoutId.pause;
 		clearTimeout(timeoutId);
 
 		index = 0;
@@ -89,6 +71,25 @@ const left = () => {
 		});
 		left();
 	};
+
+	if (translationComplete) {
+		translationComplete = false;
+		index++;
+
+		images.forEach((img, i) => {
+			img.style.opacity = 1;
+			img.style.transform = 'translate(' + (currTranslation[i] - size) + 'px)';
+			currTranslation[i] = currTranslation[i] - size;
+		});
+
+		var outerIndex = (index - 1) % amount;
+
+		var outerImg = document.querySelectorAll('.slide')[outerIndex];
+		outerImg.style.transform =
+			'translateX(' + (currTranslation[outerIndex] + size * amount) + 'px)';
+		outerImg.style.opacity = '0';
+		currTranslation[outerIndex] = currTranslation[outerIndex] + size * amount;
+	}
 
 	const timeoutId = setTimeout('left()', 3500);
 };
