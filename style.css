@@ -272,3 +272,66 @@ body {
 .animate {
 	transition: transform 3s linear;
 }
+
+/* ------------------------------------------------------------- MEDIA QUERIES -------------------------------------------------------------- */
+
+@media only screen and (max-width: 75em) {
+	html {
+		font-size: 56.25%;
+	}
+
+	.header__heading {
+		width: 65%;
+	}
+
+	.slide {
+		transform: translateX(-200%);
+	}
+}
+
+@media only screen and (max-width: 56.25em) {
+	html {
+		font-size: 50%;
+	}
+
+	.header__heading {
+		width: 80%;
+	}
+
+	.feature-img {
+		margin-bottom: 3rem;
+	}
+
+	.feature-img__1 {
+		padding-right: 2rem;
+	}
+
+	.feature-img__2 {
+		padding-left: 2rem;
+	}
+
+	.carousel-img__caption {
+		font-size: 1.5rem;
+	}
+
+	.carousel-img__caption span {
+		font-size: 1.2rem;
+	}
+
+	.countdown-box {
+		top: 50%;
+	}
+}
+
+@media only screen and (max-width: 37.5em) {
+	.header__heading {
+		font-size: 3rem;
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width: 112.5em) {
+	html {
+		font-size: 75%;
+	}
+}
