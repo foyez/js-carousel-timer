@@ -258,7 +258,7 @@ body {
 	width: 200%;
 
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 .slide {
@@ -281,7 +281,7 @@ body {
 	}
 
 	.header__heading {
-		width: 65%;
+		width: 70%;
 	}
 
 	.slide {
@@ -295,7 +295,7 @@ body {
 	}
 
 	.header__heading {
-		width: 80%;
+		width: 90%;
 	}
 
 	.feature-img {
